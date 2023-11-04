@@ -1,1 +1,9 @@
+# codebuild
 aws-codebuild-docker-images/
+artifacts/
+
+# terraform
+*.tfstate
+*.tfstate.backup
+*.tfplan
+.terraform/
