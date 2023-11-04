@@ -76,12 +76,25 @@ chmod u+x codebuild_build.sh
 ```
 
 ## 예제2. put item to s3
+* [IAM Role](./example-2/terraform/iam.tf)생성하고 AWS profile설정 후 실행
 
 ```bash
+# AWS profile 설정 예
+$ cat ~/.aws/config
+[default]
+region = ap-northeast-2
+
+[profile codebuild]
+source_profile = default
+role_arn = arn:aws:iam::xxxxxxxx:role/CodeBuild-locally-demo
+
+# CodeBuild 로컬 실행
 ./codebuild_build.sh \
 	-i public.ecr.aws/codebuild/amazonlinux2-aarch64-standard:3.0 \
 	-l public.ecr.aws/codebuild/local-builds:aarch64 \
 	-a artifacts \
+	-c ~/.aws \
+	-p codebuild \
 	-s ./example-2
 ```
 

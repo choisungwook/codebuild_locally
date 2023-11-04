@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket = "codebuild-locally-akbun"
+  bucket = var.bucket_name
 
   tags = {
     Name        = "Codebuild locally demo"
