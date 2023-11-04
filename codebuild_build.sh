@@ -96,7 +96,7 @@ then
     exit 1
 fi
 
-docker_command="docker run -it "
+docker_command="docker run --rm -it "
 if isOSWindows
 then
     docker_command+="-v //var/run/docker.sock:/var/run/docker.sock -e "
