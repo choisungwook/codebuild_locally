@@ -15,7 +15,7 @@ resource "aws_iam_role" "assume_role" {
         Action = "sts:AssumeRole",
         Effect = "Allow",
         Principal = {
-          "Service": "codebuild.amazonaws.com"
+          "Service" : "codebuild.amazonaws.com"
         }
       }
     ]
@@ -31,14 +31,14 @@ resource "aws_iam_policy" "s3_full_access" {
     Version = "2012-10-17",
     Statement = [
       {
-        "Effect": "Allow",
-        "Action": "s3:*",
-        "Resource": "arn:aws:s3:::${var.bucket_name}"
+        "Effect" : "Allow",
+        "Action" : "s3:*",
+        "Resource" : "arn:aws:s3:::${var.bucket_name}"
       },
       {
-        "Effect": "Allow",
-        "Action": "s3:*",
-        "Resource": "arn:aws:s3:::${var.bucket_name}/*"
+        "Effect" : "Allow",
+        "Action" : "s3:*",
+        "Resource" : "arn:aws:s3:::${var.bucket_name}/*"
       }
     ]
   })
