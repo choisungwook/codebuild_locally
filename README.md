@@ -1,4 +1,4 @@
-# codebuild_locally
+# 개요
 AWS CodeBuild를 로컬에서 실행
 
 <br>
@@ -93,7 +93,7 @@ role_arn = arn:aws:iam::xxxxxxxx:role/CodeBuild-locally-demo
 	-i public.ecr.aws/codebuild/amazonlinux2-aarch64-standard:3.0 \
 	-l public.ecr.aws/codebuild/local-builds:aarch64 \
 	-a artifacts \
-	-c ~/.aws \
+	-c \
 	-p codebuild \
 	-s ./example-2
 ```
