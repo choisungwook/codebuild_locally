@@ -55,6 +55,7 @@ chmod u+x codebuild_build.sh
 ## 실행 예(ARM계열 도커 이미지 사용)
 
 ```bash
+# MacOS
 ./codebuild_build.sh \
 	-i public.ecr.aws/codebuild/amazonlinux2-aarch64-standard:3.0 \
 	-l public.ecr.aws/codebuild/local-builds:aarch64 \
@@ -88,7 +89,7 @@ region = ap-northeast-2
 source_profile = default
 role_arn = arn:aws:iam::xxxxxxxx:role/CodeBuild-locally-demo
 
-# CodeBuild 로컬 실행
+# CodeBuild 로컬 실행(MacOS)
 ./codebuild_build.sh \
 	-i public.ecr.aws/codebuild/amazonlinux2-aarch64-standard:3.0 \
 	-l public.ecr.aws/codebuild/local-builds:aarch64 \
